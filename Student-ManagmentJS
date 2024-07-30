@@ -1,0 +1,97 @@
+function showForm(){
+	document.getElementById("show").style.display="block";
+} 
+function addData()
+{ 	
+	let check = document.getElementId("myCheck").value;
+	let name = document.getElementById("nameInput").value; 
+	let email = document.getElementById("emailInput").value; 
+	let mobile = document.getElementById("numberInput").value;
+	let dob = document.getElementById("date").value;
+	let telugu = document.getElementById("teluguMarks").value;
+	let hindi = document.getElementById("hindiMarks").value;
+	let english = document.getElementById("englishMarks").value;
+	let maths = document.getElementById("mathsMarks").value;
+	let science = document.getElementById("scienceMarks").value;
+	let social = document.getElementById("socialMarks").value;
+	let address = document.getElementById("addressInput").value; 
+	let table = document.getElementById("outputTable"); 
+	let newRow = table.insertRow(table.rows.length);
+	//window.alert(table.rows.length);
+	
+	newRow.insertCell(0).innerHTML = newRow.insertCell(0).innerHTML = '<input type="checkbox" name= "checkbox"class="all" id ="rowcheck" onClick="deselect()"/>';;
+	newRow.insertCell(1).innerHTML = name; 
+	newRow.insertCell(2).innerHTML = email; 
+	newRow.insertCell(3).innerHTML = mobile;
+	newRow.insertCell(4).innerHTML = dob;
+	newRow.insertCell(5).innerHTML = telugu;
+	newRow.insertCell(6).innerHTML = hindi;
+	newRow.insertCell(7).innerHTML = english;
+	newRow.insertCell(8).innerHTML = maths;
+	newRow.insertCell(9).innerHTML = science;
+	newRow.insertCell(10).innerHTML = social; 
+	newRow.insertCell(11).innerHTML = address; 
+	
+	
+	clearInputs(); 
+} 
+
+function deleteData(button)
+{ 
+	let row = button.parentNode.parentNode; 
+	row.parentNode.removeChild(row); 
+} 
+
+function clearInputs()
+{ 
+	document.getElementById("nameInput").value = ""; 
+	document.getElementById("emailInput").value = ""; 
+	document.getElementById("numberInput").value = "";
+	document.getElementById("date").value = ""; 
+	document.getElementById("teluguInput").value = "";
+	document.getElementById("hindiInput").value = "";
+	document.getElementById("englishInput").value = "";
+	document.getElementById("mathsInput").value = "";
+	document.getElementById("scienceInput").value = "";
+	document.getElementById("socialInput").value = "";
+	document.getElementById("addressInput").value = "";
+} 
+/*
+function editData(button)
+{ 			
+	let row = button.parentNode.parentNode; 
+	let nameCell = row.cells[0]; 
+	let emailCell = row.cells[1];
+	let mobileCell = row.cells[2];
+	let teluguCell = row.cells[3];
+	let hindiCell = row.cells[4];
+	let englishCell = row.cell[5]; 
+	let mathsCell = row.cells[6];
+	let scienceCell = row.cells[7];
+	let socialCell = row.cell[8]; 
+	let addressCell = row.cells[9]; 	
+	
+	let nameInput = prompt("Enter the updated name:", nameCell.innerHTML); 
+	let emailInput = prompt("Enter the updated email:", emailCell.innerHTML); 
+	let numberInput = prompt("Enter the updated mobile details:", mobileCell.innerHTML);
+	let teluguInput = prompt("Enter the updated Telugu Marks:",teluguCell.innerHtml);
+	let hindiInput = prompt("Enter the updated Hindi Marks:",hindiCell.innerHtml);
+	let englishInput = prompt("Enter the updated English Marks:",englishCell.innerHtml);
+	let mathsInput = prompt("Enter the updated Telugu Marks:",mathsCell.innerHtml);
+	let scienceInput = prompt("Enter the updated Hindi Marks:",scienceCell.innerHtml);
+	let socialInput = prompt("Enter the updated English Marks:",socialCell.innerHtml);
+	let addressInput = prompt("Enter the updated address:", addressCell.innerHTML); 
+			
+			
+	nameCell.innerHTML = nameInput; 
+	emailCell.innerHTML = emailInput; 
+	mobileCell.innerHTML = numberInput; 
+	teluguCell.innerHtml = teluguInput;
+	hindiCell.innerHtml = hindiInput;
+	englishCell.innerHtml = englishInput;
+	mathsCell.innerHtml = mathsInput;
+	scienceCell.innerHtml = scienceInput;
+	socialCell.innerHtml = socialInput;
+	addressCell.innerHTML = addressInput; 
+}
+		*/
